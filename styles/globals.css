@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-bg: #0A0A0A;
+  --text-primary: #F5F0E8;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    opacity: 0.03;
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+  }
+
+  .mughal-border {
+    position: relative;
+    border: 1px solid rgba(201, 168, 76, 0.3);
+  }
+  
+  .mughal-border::before,
+  .mughal-border::after,
+  .mughal-border .corner-bl,
+  .mughal-border .corner-tr {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #C9A84C;
+  }
+
+  .mughal-border::before {
+    top: -2px;
+    left: -2px;
+  }
+
+  .mughal-border::after {
+    bottom: -2px;
+    right: -2px;
+  }
+
+  .mughal-border .corner-tr {
+    top: -2px;
+    right: -2px;
+  }
+
+  .mughal-border .corner-bl {
+    bottom: -2px;
+    left: -2px;
+  }
+
+  .text-shadow-gold {
+    text-shadow: 0 0 10px rgba(201, 168, 76, 0.4);
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0A0A0A;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #A07830;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C9A84C;
+  }
+}
+
+/* Spinning refresh icon */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Live pulse dot */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}

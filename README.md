@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍽️ DAWAT RESTAURANT
 
-## Getting Started
+A complete, production-ready, fully deployable restaurant website built with Next.js 14, Tailwind CSS, and MongoDB.
 
-First, run the development server:
+## 🌟 Features
+- **Premium UI/UX**: Dark theme with gold luxury accents.
+- **Responsive Layout**: Works seamlessly across mobile, tablet, and desktop devices.
+- **Framer Motion Animations**: Smooth page transitions, parallax scrolling, and micro-interactions.
+- **App Router**: Leveraging the latest Next.js 14 features for maximum performance.
+- **Full-Stack Reservations**: A fully functional booking form integrated with MongoDB via API routes.
+- **WhatsApp Integration**: Direct ordering linked via WhatsApp Floating CTA.
 
-```bash
+## 🛠️ Tech Stack
+- **Framework**: [Next.js 14](https://nextjs.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Database**: [MongoDB](https://www.mongodb.com/) (Mongoose)
+- **Forms**: [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/)
+
+---
+
+## 🚀 Quick Start
+
+Follow these steps to get the project running locally:
+
+### 1. Clone the Repository
+\`\`\`bash
+git clone https://github.com/yourusername/dawat-restaurant
+cd dawat-restaurant
+\`\`\`
+
+### 2. Install Dependencies
+\`\`\`bash
+npm install
+\`\`\`
+
+### 3. Environment Variables Setup
+Copy the environment example file:
+\`\`\`bash
+cp .env.local.example .env.local
+\`\`\`
+Edit `.env.local` to include your MongoDB connection string:
+- Sign up for a free tier database at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
+- Create a Cluster and specify `MONGODB_URI` in the file.
+
+### 4. Run the Development Server
+\`\`\`bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Folder Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+\`\`\`
+dawat-restaurant/
+├── app/                  # Next.js App Router (pages and API routes)
+├── components/           # Reusable UI components
+│   ├── home/             # Homepage sections
+│   ├── layout/           # Shared Navigation and Footer
+│   ├── menu/             # Menu Cards and Tabs
+│   ├── ui/               # Small standalone reusable components
+│   └── ...
+├── data/                 # Static data (complete menu array)
+├── lib/                  # Utilities (MongoDB connection, Zod validation)
+├── models/               # Mongoose schemas (Reservation, Contact)
+├── public/               # Static assets
+└── styles/               # Global CSS variables and configs
+\`\`\`
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 API Documentation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### POST `/api/reservations`
+Content-Type: `application/json`
+Creates a new reservation. Expected body matches `reservationSchema` in `lib/validations.ts`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### POST `/api/contact`
+Content-Type: `application/json`
+Sends a contact form message. Expected body matches `contactSchema`.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚢 Deployment on Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new).
+
+1. Push your code to GitHub.
+2. Go to Vercel and select **"New Project"** -> **"Import from GitHub"**.
+3. Under Environment Variables, add your `MONGODB_URI` and `NEXT_PUBLIC_WHATSAPP_NUMBER`.
+4. Click **Deploy**.
+
+For more details, check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment).
+
+---
+
+## 🔮 Future Improvements
+- Implement a Headless CMS (like Sanity or Strapi) or an Admin Dashboard to easily update the menu.
+- Add payment gateway integration for direct takeaways.
+- Integrate Google Maps API dynamically (currently using an iframe embed for simplicity).

@@ -1,0 +1,47 @@
+// Winston logger instance for Dawat Restaurant
+
+import winston from 'winston';
+
+const logFormat = winston.format.combine(
+  winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
+  winston.format.errors({ stack: true }),
+  winston.format.json()
+);
+
+const consoleFormat = winston.format.combine(
+  winston.format.colorize(),
+  winston.format.timestamp({ format: 'HH:mm:ss' }),
+  winston.format.printf(({ level, message, timestamp, ...meta }) => {
+    const metaStr = Object.keys(meta).length > 0
+      ? ` ${JSON.stringify(meta)}`
+      : '';
+    return `${timestamp} [${level}]: ${message}${metaStr}`;
+  })
+);
+
+export const logger = winston.createLogger({
+  level: process.env.LOG_LEVEL || 'info',
+  format: logFormat,
+  defaultMeta: { service: 'dawat-restaurant' },
+  transports: [
+    // Console (always)
+    new winston.transports.Console({ format: consoleFormat }),
+
+    // Error log file (production)
+    ...(process.env.NODE_ENV === 'production'
+      ? [
+          new winston.transports.File({
+            filename: 'logs/error.log',
+            level: 'error',
+            maxsize: 10 * 1024 * 1024, // 10MB
+            maxFiles: 5,
+          }),
+          new winston.transports.File({
+            filename: 'logs/combined.log',
+            maxsize: 10 * 1024 * 1024,
+            maxFiles: 10,
+          }),
+        ]
+      : []),
+  ],
+});

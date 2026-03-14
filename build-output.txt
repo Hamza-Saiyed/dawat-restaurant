@@ -1,0 +1,160 @@
+  ▲ Next.js 14.2.35
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ ⚠ Compiled with warnings
+
+./components/admin/ui/EmptyState.tsx
+Attempted import error: 'DatabaseContext' is not exported from '__barrel_optimize__?names=DatabaseContext,FileQuestion,SearchX!=!lucide-react' (imported as 'DatabaseContext').
+
+Import trace for requested module:
+./components/admin/ui/EmptyState.tsx
+./app/admin/(protected)/gallery/page.tsx
+
+ ⚠ Compiled with warnings
+
+./components/admin/ui/EmptyState.tsx
+Attempted import error: 'DatabaseContext' is not exported from '__barrel_optimize__?names=DatabaseContext,FileQuestion,SearchX!=!lucide-react' (imported as 'DatabaseContext').
+
+Import trace for requested module:
+./components/admin/ui/EmptyState.tsx
+./app/admin/(protected)/gallery/page.tsx
+
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+
+./app/admin/(protected)/dashboard/page.tsx
+5:3  Warning: 'CreditCard' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+38:23  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+39:19  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/admin/(protected)/gallery/page.tsx
+10:10  Warning: 'SkeletonCard' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+15:40  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+38:14  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+47:6  Warning: React Hook useEffect has a missing dependency: 'fetchGallery'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+66:14  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./app/admin/(protected)/menu/page.tsx
+11:8  Warning: 'Image' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+16:38  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+17:54  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+26:50  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+44:14  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+53:6  Warning: React Hook useEffect has a missing dependency: 'fetchItems'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+74:29  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+96:13  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+110:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+114:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+138:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+150:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+169:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/admin/(protected)/messages/page.tsx
+9:45  Warning: 'Clock' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+13:44  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+19:50  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+37:14  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+47:6  Warning: React Hook useEffect has a missing dependency: 'fetchMessages'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+49:35  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+65:16  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+84:14  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+89:53  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+103:14  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+116:13  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+129:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+141:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+153:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+163:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/admin/(protected)/reservations/page.tsx
+14:52  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+20:50  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+43:54  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+49:14  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+62:6  Warning: React Hook useEffect has a missing dependency: 'fetchReservations'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+78:14  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+95:13  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+107:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+117:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+131:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+137:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/admin/(protected)/reviews/page.tsx
+14:42  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+20:56  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+35:14  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+45:6  Warning: React Hook useEffect has a missing dependency: 'fetchReviews'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+64:14  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+80:13  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+92:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+105:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+115:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+124:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+130:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/admin/(protected)/settings/page.tsx
+8:44  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+23:14  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+34:64  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+35:24  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+70:14  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./app/admin/page.tsx
+1:10  Warning: 'NextResponse' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./components/admin/dashboard/RecentMessages.tsx
+1:8  Warning: 'Badge' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./components/admin/dashboard/ReservationChart.tsx
+65:36  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./components/admin/dashboard/StatsCard.tsx
+1:10  Warning: 'ReactNode' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./components/admin/gallery/GalleryGrid.tsx
+22:71  Warning: 'onRefresh' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+48:14  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+54:36  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+84:14  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+116:21  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./components/admin/gallery/UploadModal.tsx
+4:26  Warning: 'Save' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+85:14  Warning: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+131:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./components/admin/layout/AdminHeader.tsx
+3:10  Warning: 'useAdmin' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+9:39  Warning: 'admin' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./components/admin/menu/ImageUpload.tsx
+42:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./components/admin/menu/MenuItemModal.tsx
+11:9  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+123:14  Warning: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./components/admin/reservations/ReservationDetail.tsx
+4:40  Warning: 'MapPin' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+8:16  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+41:14  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./components/admin/ui/DataTable.tsx
+3:8  Warning: 'Skeleton' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+92:28  Warning: 'rowIndex' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+Failed to compile.
+
+./backend/middlewares/validate.middleware.ts:32:33
+Type error: Property 'errors' does not exist on type 'ZodError<T>'.
+
+  30 |
+  31 |   if (!result.success) {
+> 32 |     const errors = result.error.errors.map((err) => ({
+     |                                 ^
+  33 |       field: err.path.join('.'),
+  34 |       message: err.message,
+  35 |     }));
+Next.js build worker exited with code: 1 and signal: null
