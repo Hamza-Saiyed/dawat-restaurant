@@ -40,13 +40,22 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="flex flex-col items-center">
-            <span className="font-playfair text-3xl font-bold text-gold tracking-widest text-shadow-gold">
-              DAWAT
-            </span>
-            <span className="font-jost text-[10px] uppercase tracking-[0.3em] text-text-secondary mt-1">
-              Restaurant
-            </span>
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="relative w-12 h-12 overflow-hidden rounded-full border border-gold/20 group-hover:border-gold transition-colors duration-300">
+              <img 
+                src="/logo.jpg" 
+                alt="Dawat Logo" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="flex flex-col">
+              <span className="font-playfair text-2xl font-bold text-gold tracking-widest text-shadow-gold leading-none">
+                DAWAT
+              </span>
+              <span className="font-jost text-[9px] uppercase tracking-[0.3em] text-text-secondary mt-1 ml-0.5">
+                Restaurant
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}

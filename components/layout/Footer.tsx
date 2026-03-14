@@ -10,13 +10,22 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Col */}
           <div className="flex flex-col">
-            <Link href="/" className="mb-6 flex flex-col">
-              <span className="font-playfair text-3xl font-bold text-gold tracking-widest text-shadow-gold">
-                DAWAT
-              </span>
-              <span className="font-jost text-[10px] uppercase tracking-[0.3em] text-text-secondary mt-1">
-                Restaurant
-              </span>
+            <Link href="/" className="mb-6 flex items-center space-x-3 group">
+              <div className="w-14 h-14 overflow-hidden rounded-full border border-gold/20 group-hover:border-gold transition-colors duration-300">
+                <img 
+                  src="/logo.jpg" 
+                  alt="Dawat Logo" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-playfair text-2xl font-bold text-gold tracking-widest text-shadow-gold leading-none">
+                  DAWAT
+                </span>
+                <span className="font-jost text-[9px] uppercase tracking-[0.3em] text-text-secondary mt-1 ml-0.5">
+                  Restaurant
+                </span>
+              </div>
             </Link>
             <p className="font-cormorant text-text-secondary mb-6 leading-relaxed">
               Experience the finest authentic North Indian cuisine in the heart of Ahmedabad. A royal dining experience awaits you.
