@@ -83,19 +83,6 @@ Sends a contact form message. Expected body matches `contactSchema`.
 
 ---
 
-## 🚢 Deployment on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new).
-
-1. Push your code to GitHub.
-2. Go to Vercel and select **"New Project"** -> **"Import from GitHub"**.
-3. Under Environment Variables, add your `MONGODB_URI` and `NEXT_PUBLIC_WHATSAPP_NUMBER`.
-4. Click **Deploy**.
-
-For more details, check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment).
-
----
-
 ## 🔮 Future Improvements
 - Implement a Headless CMS (like Sanity or Strapi) or an Admin Dashboard to easily update the menu.
 - Add payment gateway integration for direct takeaways.
