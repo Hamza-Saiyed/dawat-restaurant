@@ -24,24 +24,10 @@ export const logger = winston.createLogger({
   format: logFormat,
   defaultMeta: { service: 'dawat-restaurant' },
   transports: [
-    // Console (always)
-    new winston.transports.Console({ format: consoleFormat }),
-
-    // Error log file (production)
-    ...(process.env.NODE_ENV === 'production'
-      ? [
-          new winston.transports.File({
-            filename: 'logs/error.log',
-            level: 'error',
-            maxsize: 10 * 1024 * 1024, // 10MB
-            maxFiles: 5,
-          }),
-          new winston.transports.File({
-            filename: 'logs/combined.log',
-            maxsize: 10 * 1024 * 1024,
-            maxFiles: 10,
-          }),
-        ]
-      : []),
+    new winston.transports.Console({
+      format: process.env.NODE_ENV === 'production'
+        ? winston.format.json()
+        : consoleFormat,
+    }),
   ],
 });
